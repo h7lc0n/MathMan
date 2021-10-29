@@ -1,6 +1,12 @@
 <!-- PROJECT SHIELDS -->
 [![Issues][issues-shield]][issues-url]
 
+
+<br />
+<p align="center">
+  <a href="https://github.com/h7lc0n/MathMan/">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.B9Q9P6V_m9kEEWRa6Q-gjADHE5%26pid%3DApi&f=1" alt="Logo" width="250" height="350">
+  </a>
   <h3 align="center">MathMan Tool</h3>
 
   <p align="center">
