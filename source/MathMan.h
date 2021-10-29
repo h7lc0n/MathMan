@@ -9,6 +9,9 @@
  * 
  */
 
+#ifndef MATHMAN_H_
+#define MATHMAN_H_
+
 #pragma once
 
 #include <iostream>
@@ -23,26 +26,18 @@ using std::endl;
 using std::string;
 
 
-auto clearBuffer {
-    []()
-    {
-        cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-    }
-};
-
-
 class MathMan {
     private:
         /* data */
     public:
-        MathMan();
-        ~MathMan();
+        // MathMan();
+        // ~MathMan();
 
         std::tuple<int, int, string> CommonLaw(int a, int b, int c, bool = false);
 
 
 };
-
+#endif // MATHMAN_H_
 
 /*
 MathMan::MathMan() {
