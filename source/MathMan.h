@@ -1,5 +1,5 @@
 /**
- * @file header.h
+ * @file MathMan.h
  * @author SaQr AlGhamdi (h7lc0n@gmail.com)
  * @brief 
  * @version 0.1
