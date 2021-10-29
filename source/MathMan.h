@@ -38,7 +38,7 @@ class MathMan {
         MathMan();
         ~MathMan();
 
-        std::tuple<int, int, int> CommonLaw(int a, int b, int c, bool = false);
+        std::tuple<int, int, string> CommonLaw(int a, int b, int c, bool = false);
 
 
 };
