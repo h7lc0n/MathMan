@@ -12,7 +12,7 @@
 #include "MathMan.h"
 
 
-std::tuple<int, int, string> MathMan::CommonLaw(int a, int b, int c, bool printSolution) {
+std::tuple<int, int, string> MathMan::CommonLaw(int a, int b, int c) {
     string discStatus;
 
     int discriminant    = pow(b, 2) - ( 4 * a * c );
@@ -27,12 +27,25 @@ std::tuple<int, int, string> MathMan::CommonLaw(int a, int b, int c, bool printS
         discStatus = "Two conjugated compound roots";
     }
 
-    // Return the common law values (Positive, Negative) & the discriminant status
-    if (printSolution) {
-        cout << "Positive Value = " << positiveValue << endl;
-        cout << "Negative Value = " << negativeValue << endl;
-        cout << "Dicsriminant Status = " << discStatus << endl;
-    } else {
-        return std::make_tuple(positiveValue, negativeValue, discStatus);
+    return std::make_tuple(positiveValue, negativeValue, discStatus);
+}
+
+
+string MathMan::RealNumbers(int number) {
+    /*
+    std::tuple<char, char, char, char, char> types;
+
+    types = std::make_tuple('N', 'W', 'Z', 'Q', 'I');
+    */
+    string numberType;
+
+    if (number >= 1) {
+        numberType = "Natural Number";
+    } else if (number == 0) {
+        numberType = "Whole Number";
+    } else if (number < 0) {
+        numberType = "Integer";
     }
+
+    return numberType;
 }

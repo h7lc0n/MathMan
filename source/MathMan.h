@@ -9,14 +9,17 @@
  * 
  */
 
-#ifndef MATHMAN_H_
-#define MATHMAN_H_
 
 #pragma once
 
+#ifndef MATHMAN_H_
+#define MATHMAN_H_
+
 #include <iostream>
+#include <typeinfo>
 #include <limits>
 #include <math.h>
+#include <vector>
 #include <tuple>
 #include <ios>
 
@@ -33,7 +36,8 @@ class MathMan {
         // MathMan();
         // ~MathMan();
 
-        std::tuple<int, int, string> CommonLaw(int a, int b, int c, bool = false);
+        std::tuple<int, int, string> CommonLaw(int a, int b, int c);
+        string RealNumbers(int number);
 
 
 };

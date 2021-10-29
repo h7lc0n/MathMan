@@ -21,10 +21,49 @@ auto clearBuffer {
 
 int main() {
 
-    int a = 2, b = -8, c = 5;
-    
-    MathMan MathMan;
-    MathMan.CommonLaw(a, b, c, true);
+    char choice;
 
-    return 0;
+    system("clear");
+    printf("\n=====================================\n\n");
+    printf("\tWelcome To Math3 Book\n");
+    printf("\tChoose Your Problem");
+    printf("\n\n=====================================\n");
+    
+    printf("1. Common law & Dicsriminant\n");
+    printf("2. Real Numbers\n");
+
+    printf("i. About the program\n");
+    printf("E. Exit program\n\n");
+
+    cout << "Choose Your Problem: ";
+    cin >> choice;
+    clearBuffer;
+
+    switch (choice) {
+    case '1':
+        MathMan MathMan;
+        MathMan.CommonLaw(NULL, NULL, NULL); // CHANGE: arguments
+        break;
+    
+    case '2':
+        MathMan.RealNumbers(NULL); // CHANGE: arguments
+        break;
+
+    case 'i':
+        cout << endl << endl;
+        cout << "Author: SaQr AlGhamdi - @h7lc0n" << endl;
+        cout << "Program brief: This is a simple program to solve Math3 book problems." << endl;
+        cout << "Version: 0.1" << endl;
+        break;
+    
+    case 'E':
+        cout << "See you budd" << endl;
+        exit(0);
+        break;
+    
+    default:
+        break;
+    }
+
+    return 0; // Zero errors
 }
