@@ -1,5 +1,5 @@
 /**
- * @file func.cpp
+ * @file MathMan.cpp
  * @author SaQr AlGhamdi (h7lc0n@gmail.com)
  * @brief 
  * @version 0.1
