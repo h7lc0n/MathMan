@@ -12,7 +12,7 @@
 #include "MathMan.h"
 
 
-std::tuple<int, int, int> MathMan::CommonLaw(int a, int b, int c, bool printSolution) {
+std::tuple<int, int, string> MathMan::CommonLaw(int a, int b, int c, bool printSolution) {
     string discStatus;
 
     int discriminant    = pow(b, 2) - ( 4 * a * c );
