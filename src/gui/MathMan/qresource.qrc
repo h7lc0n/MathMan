@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>MathMan.ico</file>
+    </qresource>
+</RCC>
