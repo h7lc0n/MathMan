@@ -10,7 +10,7 @@
  */
 
 //TODO: GUI version
-//TOOD: CLI version
+//TODO: CLI version
 
 #include "MathMan.h"
 
