@@ -12,7 +12,7 @@
 //TODO: GUI version
 //TODO: CLI version
 
-#include "MathMan.h"
+#include "../bin/Math/MathMan.h"
 
 
 auto clearBuffer {
