@@ -9,6 +9,9 @@
  * 
  */
 
+//TODO: GUI version
+//TOOD: CLI version
+
 #include "MathMan.h"
 
 
@@ -19,9 +22,21 @@ auto clearBuffer {
     }
 };
 
-int main() {
 
-    char choice;
+//TODO: add arguments handler
+int main(int argc, char** args) {
+
+    cout << "Arguments Count:: " << argc << endl;
+    cout << "Arguments :: " << args << endl;
+
+    return 0; // Zero errors
+}
+
+
+/**
+ * 
+ * 
+ * char choice;
 
     system("clear");
     printf("\n=====================================\n\n");
@@ -64,6 +79,5 @@ int main() {
     default:
         break;
     }
-
-    return 0; // Zero errors
-}
+ * 
+ */
