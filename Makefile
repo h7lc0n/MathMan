@@ -2,7 +2,7 @@
 
 COMP   = g++			## Compiler used is g++
 FLAGS  = -o			## -o flag to save the output executable file
-SRCS  := $(wildcard /src/*.cpp)	## All files with .cpp exstinsion
+SRCS  := $(wildcard src/*.cpp)	## All files with .cpp exstinsion
 PRGNM  = "MathMan"		## MathMan - is the output file name
 
 ## Run all in once ( not much functionality haha ) ~ just for fun ~
