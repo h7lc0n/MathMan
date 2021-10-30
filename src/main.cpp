@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * @author SaQr AlGhamdi (h7lc0n@gmail.com)
+ * @author SaQr AlGhamdi <h7lc0n@gmail.com>
  * @brief This is a simple program to solve Math3 book problems.
  * @version 0.1
  * @date 2021-10-29
@@ -23,11 +23,17 @@ auto clearBuffer {
 };
 
 
-//TODO: add arguments handler
-int main(int argc, char** args) {
+//TODO: add arguments handler - DONE
+int main(int argc, char *argv[]) {
+    string mode;
 
-    cout << "Arguments Count:: " << argc << endl;
-    cout << "Arguments :: " << args << endl;
+    ( argc < 2 ) ? mode = "gui" : mode = argv[1];
+
+    if (mode == "cli") {
+        return ;
+    } else {
+        return ;
+    };
 
     return 0; // Zero errors
 }
