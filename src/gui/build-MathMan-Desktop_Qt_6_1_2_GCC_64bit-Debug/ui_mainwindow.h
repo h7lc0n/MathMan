@@ -12,9 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -29,6 +32,9 @@ public:
     QAction *actionProgram;
     QAction *actionDocument;
     QWidget *centralwidget;
+    QPushButton *pushButton;
+    QLabel *image;
+    QComboBox *comboBox;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuView;
@@ -40,7 +46,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(394, 337);
         actionExit = new QAction(MainWindow);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionDay = new QAction(MainWindow);
@@ -53,10 +59,33 @@ public:
         actionDocument->setObjectName(QString::fromUtf8("actionDocument"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(210, 200, 141, 41));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("URW Gothic")});
+        font.setPointSize(16);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setStrikeOut(false);
+        font.setKerning(true);
+        pushButton->setFont(font);
+        pushButton->setCursor(QCursor(Qt::PointingHandCursor));
+        image = new QLabel(centralwidget);
+        image->setObjectName(QString::fromUtf8("image"));
+        image->setGeometry(QRect(10, 10, 161, 261));
+        image->setPixmap(QPixmap(QString::fromUtf8(":/images/MathMan.ico")));
+        comboBox = new QComboBox(centralwidget);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(190, 110, 181, 25));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 394, 22));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuView = new QMenu(menubar);
@@ -97,6 +126,14 @@ public:
         actionNight->setText(QCoreApplication::translate("MainWindow", "Night", nullptr));
         actionProgram->setText(QCoreApplication::translate("MainWindow", "Program", nullptr));
         actionDocument->setText(QCoreApplication::translate("MainWindow", "Document", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
+        image->setText(QString());
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Quadratic Equation", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Real Numbers", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Complex", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Matrix", nullptr));
+
+        comboBox->setPlaceholderText(QCoreApplication::translate("MainWindow", "Math Problems", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
         menuTheme->setTitle(QCoreApplication::translate("MainWindow", "Theme", nullptr));
