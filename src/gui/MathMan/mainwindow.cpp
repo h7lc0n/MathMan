@@ -36,9 +36,14 @@ void MainWindow::on_actionProgram_triggered()
 }
 
 
+void MainWindow::on_actionDocument_triggered()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/h7lc0n/MathMan/blob/main/USAGE.md"));
+}
+
+
 void MainWindow::on_actionExit_triggered()
 {
     MainWindow::~MainWindow();
     exit(0);
 }
-
