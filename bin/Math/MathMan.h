@@ -37,7 +37,7 @@ class MathMan {
         // ~MathMan();
 
         std::tuple<int, int, string> QuadraticEqu(int a, int b, int c);
-        string RealNumbers(int number);
+        string RealNumbers(double number);
 
 
 };
