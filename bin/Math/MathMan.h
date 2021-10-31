@@ -36,7 +36,7 @@ class MathMan {
         // MathMan();
         // ~MathMan();
 
-        std::tuple<int, int, string> CommonLaw(int a, int b, int c);
+        std::tuple<int, int, string> QuadraticEqu(int a, int b, int c);
         string RealNumbers(int number);
 
 

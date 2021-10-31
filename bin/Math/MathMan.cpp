@@ -12,7 +12,18 @@
 #include "MathMan.h"
 
 
-std::tuple<int, int, string> MathMan::CommonLaw(int a, int b, int c) {
+std::tuple<int, int, string> MathMan::QuadraticEqu(int a, int b, int c) {
+    /**
+     * @brief Quadratic Equation Function
+     * 
+     * @param a (a)x² + bx + c = 0
+     * @param b ax² + (b)x + c = 0
+     * @param c ax² + bx + (c) = 0
+     * 
+     * 
+     * 
+     * 
+     */
     string discStatus;
 
     int discriminant    = pow(b, 2) - ( 4 * a * c );
