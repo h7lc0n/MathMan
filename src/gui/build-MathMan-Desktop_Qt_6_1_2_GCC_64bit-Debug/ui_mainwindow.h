@@ -80,6 +80,7 @@ public:
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(190, 110, 181, 25));
         MainWindow->setCentralWidget(centralwidget);
@@ -129,9 +130,10 @@ public:
         pushButton->setText(QCoreApplication::translate("MainWindow", "Start", nullptr));
         image->setText(QString());
         comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Quadratic Equation", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Real Numbers", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Complex", nullptr));
-        comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Matrix", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Cramer's Rule", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Real Numbers", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Complex", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Matrix", nullptr));
 
         comboBox->setPlaceholderText(QCoreApplication::translate("MainWindow", "Math Problems", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

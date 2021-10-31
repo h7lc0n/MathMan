@@ -76,6 +76,11 @@
     </item>
     <item>
      <property name="text">
+      <string>Cramer's Rule</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>Real Numbers</string>
      </property>
     </item>
