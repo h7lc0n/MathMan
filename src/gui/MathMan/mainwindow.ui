@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>394</width>
+    <width>395</width>
     <height>324</height>
    </rect>
   </property>
@@ -66,6 +66,15 @@
       <height>25</height>
      </rect>
     </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>Choose Your Problem</string>
+    </property>
     <property name="placeholderText">
      <string>Math Problems</string>
     </property>
@@ -101,7 +110,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>394</width>
+     <width>395</width>
      <height>22</height>
     </rect>
    </property>

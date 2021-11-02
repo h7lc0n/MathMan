@@ -14,7 +14,6 @@ MainWindow::~MainWindow()
 }
 
 
-
 void MainWindow::on_actionProgram_triggered()
 {
     QMessageBox msgBox;

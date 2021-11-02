@@ -46,7 +46,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(394, 324);
+        MainWindow->resize(395, 324);
         actionExit = new QAction(MainWindow);
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionDay = new QAction(MainWindow);
@@ -83,10 +83,12 @@ public:
         comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(190, 110, 181, 25));
+        comboBox->setFocusPolicy(Qt::NoFocus);
+        comboBox->setEditable(true);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 394, 22));
+        menubar->setGeometry(QRect(0, 0, 395, 22));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuView = new QMenu(menubar);
@@ -135,6 +137,7 @@ public:
         comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Complex", nullptr));
         comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Matrix", nullptr));
 
+        comboBox->setCurrentText(QCoreApplication::translate("MainWindow", "Choose Your Problem", nullptr));
         comboBox->setPlaceholderText(QCoreApplication::translate("MainWindow", "Math Problems", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuView->setTitle(QCoreApplication::translate("MainWindow", "View", nullptr));
