@@ -30,9 +30,11 @@ int main(int argc, char *argv[]) {
     ( argc < 2 ) ? mode = "gui" : mode = argv[1];
 
     if (mode == "--cli") {
-        return ;
+        cout << "CLI interface executing ..." << endl;
+        //return ;
     } else {
-        return ;
+        cout << "GUI interface executing ..." << endl;
+        //return ;
     };
 
     return 0; // Zero errors
