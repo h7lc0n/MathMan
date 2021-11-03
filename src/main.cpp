@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
     ( argc < 2 ) ? mode = "gui" : mode = argv[1];
 
-    if (mode == "cli") {
+    if (mode == "--cli") {
         return ;
     } else {
         return ;
