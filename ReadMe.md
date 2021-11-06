@@ -79,7 +79,7 @@
   make          /* Default: Build The Project */
   make install  /* install Requirements */
   make run      /* Run The Program Directly */
-  make update   /* Update The Program */
+  make update   /* Update The Program Files */
   ```
 
 ## Contact
