@@ -1,6 +1,12 @@
 # ignore ALL .log files
 *.log
 
+# ignore executable files
+MathMan
+*.o
+*.out
+*.exe
+
 # ignore ALL files in ANY directory named temp
 temp/
 test/
