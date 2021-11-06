@@ -48,7 +48,7 @@ install:
 	@sleep 3
 	@clear
 
-	@apt install build-essential
+	@apt-get install build-essential
 
 
 update:

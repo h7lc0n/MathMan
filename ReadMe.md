@@ -48,21 +48,20 @@
 ## About The Project
 ### Built With
 * [C++14](https://www.cplusplus.com/)
+* [Qt6](https://www.qt.io/)
 
 ## Getting Started
 ### Prerequisites
 
-* Update Your System
-  ```sh
-  sudo apt update -y && sudo apt upgrade -y
-  ```
 * Install MinGW (For Windows)
   ```
   https://sourceforge.net/projects/mingw/
   ```
-* Install gcc (For Linux)
+* Install gcc/g++ (For Linux)
+  note: don't worry, I've setup Makefile to do that for you
   ```
-  https://gcc.gnu.org/install/
+  make install
+  make run
   ```
 
 ### Installation
@@ -77,8 +76,10 @@
   ```
 * Run Makefile To Setup .
   ```
-  make
-  make run /* To run the program directly */
+  make          /* Default: Build The Project */
+  make install  /* install Requirements */
+  make run      /* Run The Program Directly */
+  make update   /* Update The Program */
   ```
 
 ## Contact
