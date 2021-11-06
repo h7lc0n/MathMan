@@ -13,7 +13,7 @@
 //TODO: CLI version
 
 #include "../bin/Math/MathMan.h"
-#include "../libs/argparse/argparse.h"
+#include "../libs/argparse/include/argparse/argparse.hpp"
 
 
 using namespace argparse;

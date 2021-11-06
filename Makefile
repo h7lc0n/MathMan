@@ -2,7 +2,7 @@
 
 
 RUNPFX		= ./
-ROOTCHECK	= getroot.sh
+ROOTCHECK	= tools/getroot.sh
 
 CXX			= g++
 CXXFLAGS	= -o
