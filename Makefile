@@ -16,8 +16,9 @@ DATE	    = date +"%F %H:%M:%S"
 
 
 run: build
+	@clear
 	@${DATE}
-	${RUNPFX}${OUTNAME}
+	@${RUNPFX}${OUTNAME}
 
 build:
 	@${DATE}
@@ -29,7 +30,7 @@ build:
 	@echo "Execute Using: ${RUNPFX}${OUTNAME} or with command 'make run'"
 
 install:
-	@chmod +x getroot.sh
+	@chmod +x ${ROOTCHECK}
 	@${RUNPFX}${ROOTCHECK}
 
 	@${DATE}
@@ -52,7 +53,7 @@ install:
 
 
 update:
-	@chmod +x getroot.sh
+	@chmod +x ${ROOTCHECK}
 	@${RUNPFX}${ROOTCHECK}
 
 	@apt-get update -y
