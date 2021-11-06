@@ -59,7 +59,6 @@ install: is_root
 
 	@apt-get install build-essential
 
-
 update: is_root
 
 	@apt-get update -y
@@ -67,3 +66,4 @@ update: is_root
 
 	@git stash
 	@git pull
+## Oh la la, 69 again 😏
