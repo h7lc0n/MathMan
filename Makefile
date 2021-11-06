@@ -15,6 +15,11 @@ SOURCES	   := $(wildcard bin/Math/*.cpp)
 DATE	    = date +"%F %H:%M:%S"
 
 
+is_root:
+	@${DATE}
+	@chmod +x ${ROOTCHECK}
+	@${RUNPFX}${ROOTCHECK}
+
 run: build
 	@clear
 	@${DATE}
@@ -29,9 +34,7 @@ build:
 	@echo "\nCode Done With Name: ${OUTNAME}"
 	@echo "Execute Using: ${RUNPFX}${OUTNAME} or with command 'make run'"
 
-install:
-	@chmod +x ${ROOTCHECK}
-	@${RUNPFX}${ROOTCHECK}
+install: is_root
 
 	@${DATE}
 	@echo "\tUpdating System ..."
@@ -52,9 +55,7 @@ install:
 	@apt-get install build-essential
 
 
-update:
-	@chmod +x ${ROOTCHECK}
-	@${RUNPFX}${ROOTCHECK}
+update: is_root
 
 	@apt-get update -y
 	@clear
