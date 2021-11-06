@@ -13,7 +13,10 @@
 //TODO: CLI version
 
 #include "../bin/Math/MathMan.h"
+#include "../libs/argparse/argparse.h"
 
+
+using namespace argparse;
 
 auto clearBuffer {
     []()
@@ -23,8 +26,40 @@ auto clearBuffer {
 };
 
 
-//TODO: add arguments handler - DONE
-int main(int argc, char *argv[]) {
+//TODO: add arguments handler
+
+int main(int argc, const char* argv[]) {
+    ArgumentParser parser("MathMan", "Argument parser example");
+
+    parser.add_argument()
+      .names({"-c", "--cli"})
+      .description("Command Line Interface");
+
+    parser.add_argument()
+      .names({"-g", "--gui"})
+      .description("Graphical User Interface");
+
+    parser.enable_help();
+    auto err = parser.parse(argc, argv);
+
+    if (parser.exists("gui")) {
+        cout << parser.get<string>("gui") << endl;
+        return 0;
+    }
+
+    if (parser.exists("help")) {
+        parser.print_help();
+        return 0;
+    }
+
+    if (err) {
+        std::cout << err << std::endl;
+        return -1;
+    }
+}
+
+
+/**
     string mode;
 
     ( argc < 2 ) ? mode = "gui" : mode = argv[1];
@@ -38,8 +73,7 @@ int main(int argc, char *argv[]) {
     };
 
     return 0; // Zero errors
-}
-
+    */
 
 /**
  * 

@@ -1,19 +1,56 @@
-.DEFAULT_GOAL := build	## Is the default rule to run
+.DEFAULT_GOAL := build
 
-COMP   = g++			## Compiler used is g++
-FLAGS  = -o			## -o flag to save the output executable file
-SRCS  := $(wildcard src/*.cpp)	## All files with .cpp exstinsion
-PRGNM  = "MathMan"		## MathMan - is the output file name
 
-## Run all in once ( not much functionality haha ) ~ just for fun ~
+RUNPFX		= ./
+ROOTCHECK	= getroot.sh
+
+CXX			= g++
+CXXFLAGS	= -o
+OUTNAME		= MathMan
+
+MAIN	  	= src/main.cpp
+SOURCES	   := $(wildcard bin/Math/*.cpp)
+
+DATE	    = date +"%F %H:%M:%S"
+
+
 run: build
-	@./${PRGNM}				## Execute MathMan file
-	@echo "\n\n"				## New-line
-	@echo "Makefile ran successfully!"	## Success message
+	@${DATE}
+	${RUNPFX}${OUTNAME}
 
 build:
-	## So it will look like :
-	## g++ main.cpp MathMan.cpp -o MathMan
+	@${DATE}
+	${CXX} ${SOURCES} ${MAIN} ${CXXFLAGS} ${OUTNAME}
 
-	${COMP} ${SRCS} ${FLAGS} ${PRGNM}
-	clear
+install:
+	@chmod +x getroot.sh
+	@${RUNPFX}${ROOTCHECK}
+
+	@${DATE}
+	@echo "\tUpdating System ..."
+	
+	@sleep 1
+	@clear
+	
+	@apt-get update -y
+
+	@clear
+
+	@${DATE}
+	@echo "\tInstalling gcc/g++/make and other packages ..."
+
+	@sleep 3
+	@clear
+
+	@apt install build-essential
+
+
+update:
+	@chmod +x getroot.sh
+	@${RUNPFX}${ROOTCHECK}
+
+	@apt-get update -y
+	@clear
+
+	@git stash
+	@git pull
