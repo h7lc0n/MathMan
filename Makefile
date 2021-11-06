@@ -17,8 +17,13 @@ DATE	    = date +"%F %H:%M:%S"
 
 is_root:
 	@${DATE}
+	@echo "\tChecking For Root Permission ..."
+	@sleep 1
+
 	@chmod +x ${ROOTCHECK}
 	@${RUNPFX}${ROOTCHECK}
+
+	@clear
 
 run: build
 	@clear
