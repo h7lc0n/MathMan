@@ -13,10 +13,14 @@
 //TODO: CLI version
 
 #include "../bin/Math/MathMan.h"
-#include "../libs/argparse/include/argparse/argparse.hpp"
+#include "../libs/argparse.hpp"
 
 
-using namespace argparse;
+using std::cout;
+using std::cin;
+using std::cerr;
+using std::endl;
+using std::string;
 
 auto clearBuffer {
     []()
@@ -28,34 +32,22 @@ auto clearBuffer {
 
 //TODO: add arguments handler
 
-int main(int argc, const char* argv[]) {
-    ArgumentParser parser("MathMan", "Argument parser example");
+int main(int argc, char* argv[]) {
+    ap::parser program(argc, argv);
 
-    parser.add_argument()
-      .names({"-c", "--cli"})
-      .description("Command Line Interface");
+    program.add("-m", "--mode", "Interface Mode ( GUI, CLI )", ap::mode::OPTIONAL);
 
-    parser.add_argument()
-      .names({"-g", "--gui"})
-      .description("Graphical User Interface");
+    auto args = program.parse();
 
-    parser.enable_help();
-    auto err = parser.parse(argc, argv);
-
-    if (parser.exists("gui")) {
-        cout << parser.get<string>("gui") << endl;
-        return 0;
-    }
-
-    if (parser.exists("help")) {
-        parser.print_help();
-        return 0;
-    }
-
-    if (err) {
-        std::cout << err << std::endl;
+    if (!args.parsed_successfully()) {
+	    cerr << "You must choose between GUI or CLI." << endl;
         return -1;
     }
+
+    auto mode = (args["-m"].empty() ? "gui" : args["-m"]);
+
+    cout << mode << endl;
+    return 0;
 }
 
 

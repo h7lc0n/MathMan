@@ -1,12 +1,13 @@
 .DEFAULT_GOAL := build
 
 
+OUTNAME		= MathMan
+
 RUNPFX		= ./
 ROOTCHECK	= tools/getroot.sh
 
 CXX			= g++
-CXXFLAGS	= -o
-OUTNAME		= MathMan
+CXXFLAGS	= -std=c++11 -o ${OUTNAME}
 
 MAIN	  	= src/main.cpp
 SOURCES	   := $(wildcard bin/Math/*.cpp)
@@ -20,7 +21,12 @@ run: build
 
 build:
 	@${DATE}
-	${CXX} ${SOURCES} ${MAIN} ${CXXFLAGS} ${OUTNAME}
+	@echo "\tGenerating Machine Code ..."
+
+	@${CXX} ${SOURCES} ${MAIN} ${CXXFLAGS}
+
+	@echo "\nCode Done With Name: ${OUTNAME}"
+	@echo "Execute Using: ${RUNPFX}${OUTNAME} or with command 'make run'"
 
 install:
 	@chmod +x getroot.sh
