@@ -9,7 +9,7 @@ ROOTCHECK	= tools/getroot.sh
 CXX			= g++
 CXXFLAGS	= -std=c++11 -o ${OUTNAME}
 
-MAIN	  	= src/main.cpp
+MAIN	  	= main.cpp
 SOURCES	   := $(wildcard bin/Math/*.cpp)
 
 DATE	    = date +"%F %H:%M:%S"
