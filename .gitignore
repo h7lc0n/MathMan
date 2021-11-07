@@ -2,10 +2,15 @@
 *.log
 
 # ignore executable files
-MathMan
 *.o
 *.out
+*.bin
+*.run
 *.exe
+
+# ignore MathMan executable file
+MathMan
+MathMan.*
 
 # ignore ALL files in ANY directory named temp
 temp/
