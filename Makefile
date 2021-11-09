@@ -12,8 +12,13 @@ CXXFLAGS	= -std=c++11 -o ${OUTNAME}
 MAIN	  	= main.cpp
 SOURCES	   := $(wildcard bin/Math/*.cpp)
 
-DATE	    = date +"%F %H:%M:%S"
+GUIFILES   := $(wildcard src/gui/*.cpp)
 
+PACKAGES 	= wx2.8-headers \
+		   		libwxgtk2.8-0 \
+		   		libwxgtk2.8-dev
+
+DATE	    = date +"%F %H:%M:%S"
 
 is_root:
 	@${DATE}
@@ -42,22 +47,29 @@ build:
 install: is_root
 
 	@${DATE}
-	@echo "\tUpdating System ..."
+	@echo "\tUpdating System ...\n"
 	
 	@sleep 1
-	@clear
 	
 	@apt-get update -y
 
 	@clear
 
 	@${DATE}
-	@echo "\tInstalling gcc/g++/make and other packages ..."
+	@echo "\tInstalling gcc, g++, make & other packages ...\n"
 
-	@sleep 3
-	@clear
+	@sleep 2
 
 	@apt-get install build-essential
+
+	@clear
+
+	@${DATE}
+	@echo "\tInstalling wxWidgets & Gtk++ ...\n"
+## Oh la la, 69 again 😏
+	@sleep 2
+
+	@apt-get install ${PACKAGES}
 
 update: is_root
 
@@ -66,4 +78,3 @@ update: is_root
 
 	@git stash
 	@git pull
-## Oh la la, 69 again 😏
