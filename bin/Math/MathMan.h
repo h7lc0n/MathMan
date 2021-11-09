@@ -12,8 +12,8 @@
 
 #pragma once
 
-#ifndef MATHMAN_H_
-#define MATHMAN_H_
+#ifndef __MATHMAN_H_
+#define __MATHMAN_H_
 
 #include <iostream>
 #include <typeinfo>
@@ -41,7 +41,8 @@ class MathMan {
 
 
 };
-#endif // MATHMAN_H_
+
+#endif // __MATHMAN_H_
 
 /*
 MathMan::MathMan() {
