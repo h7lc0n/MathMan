@@ -1,13 +1,16 @@
+/**
+ * @file mainwindow.cpp
+ * @author SaQr AlGhamdi <h7lc0n@gmail.com>
+ * @brief 
+ * @version 0.1
+ * @date 2021-11-07
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include "mainwindow.h"
 
-
-wxIMPLEMENT_APP(MyApp);
-
-bool MyApp::OnInit() {
-    MyFrame *frame = new MyFrame();
-    frame->Show(true);
-    return true;
-}
 
 MyFrame::MyFrame()
     : wxFrame(NULL, wxID_ANY, "Hello World") {
@@ -29,10 +32,6 @@ MyFrame::MyFrame()
     Bind(wxEVT_MENU, &MyFrame::OnExit, this, wxID_EXIT);
 }
 
-void MyFrame::OnExit(wxCommandEvent& event) {
-    Close(true);
-}
-
 void MyFrame::OnAbout(wxCommandEvent& event) {
     wxMessageBox("This is a wxWidgets Hello World example",
                  "About Hello World", wxOK | wxICON_INFORMATION);
@@ -40,4 +39,8 @@ void MyFrame::OnAbout(wxCommandEvent& event) {
 
 void MyFrame::OnHello(wxCommandEvent& event) {
     wxLogMessage("Hello world from wxWidgets!");
+}
+
+void MyFrame::OnExit(wxCommandEvent& event) {
+    Close(true);
 }
